@@ -292,7 +292,7 @@ const Portfolio = () => {
                 <img
                     src="/profil_pic.png"
                     alt="Maxime VÉRY"
-                    className="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-4 border-white shadow-lg relative z-10"
+                    className="w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-white shadow-lg relative z-10"
                 />
               </div>
               <h1 className="text-3xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
@@ -301,7 +301,7 @@ const Portfolio = () => {
               <h2 className="text-xl sm:text-2xl mb-6 text-blue-200 px-4">Manager de Projet Informatique en Alternance</h2>
               <div className="flex items-center justify-center gap-2 mb-6">
                 <MapPin size={20} className="text-blue-400"/>
-                <span className="text-sm sm:text-base">Riom, Auvergne-Rhône-Alpes, France</span>
+                <span className="text-sm sm:text-base">Pérignat-lès-Sarlièves, Auvergne-Rhône-Alpes, France</span>
               </div>
               <div className="flex justify-center gap-4 sm:gap-6">
                 <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-transform">
