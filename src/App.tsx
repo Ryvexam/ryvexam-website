@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+simport React from 'react';
 import {
   Github,
   Linkedin,
@@ -17,12 +17,12 @@ import {
   Code2,
   Terminal,
   Globe,
-  Cpu } from 'lucide-react';
+  Cpu,
+  Shield,
+  Globe2,
+  BookOpen } from 'lucide-react';
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState('about');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const socialLinks = {
     github: "https://github.com/ryvexam",
     linkedin: "https://www.linkedin.com/in/maxime-very/",
@@ -33,21 +33,19 @@ const Portfolio = () => {
     {
       icon: <Briefcase className="text-blue-400" size={24} />,
       title: "Expérience",
-      content: "1 an d'expérience en développement Python à Michelin, 2 ans en administration système à Tertio Informatique et également 2 ans en tant que freelance en création de sites internet."
+      content: "Python Developer chez Michelin, 2 ans d'administration système et réseau à Tertio Informatique, activité freelance en développement web, et expérience en cybersécurité avec Qroissantage.fr."
     },
     {
       icon: <Education className="text-blue-400" size={24} />,
       title: "Formation",
-      content: "Bac Scientifique option ISN, BTS SIO en Systèmes et Réseaux, Bachelor en Conception Développement d'Applications, et formation Manager de Projet Informatique."
+      content: "En préparation du titre Manager de Projet Informatique (RNCP38905), après l'obtention du titre Concepteur Développeur d'Applications (RNCP37873), BTS SIO option SISR, et Bac S spécialité ISN."
     },
     {
       icon: <Code2 className="text-blue-400" size={24} />,
       title: "Compétences Techniques",
-      content: "Maîtrise de React, Symfony, Python, Java, .NET, et des pratiques DevOps."
+      content: "Développement web fullstack (React, Symfony), automatisation Python, DevOps (Docker, Linux), cybersécurité, et outils d'analyse de données (PowerBI, Pandas, Streamlit)."
     }
   ];
-
-
 
   const skillCategories = [
     {
@@ -56,8 +54,8 @@ const Portfolio = () => {
       skills: [
         { name: "React.js", level: 85 },
         { name: "JavaScript/TypeScript", level: 80 },
-        { name: "HTML5/CSS3", level: 90 },
         { name: "Tailwind CSS", level: 85 },
+        { name: "WordPress", level: 75 },
       ]
     },
     {
@@ -66,21 +64,20 @@ const Portfolio = () => {
       skills: [
         { name: "PHP/Symfony", level: 80 },
         { name: "Python", level: 85 },
-        { name: "Node.js", level: 75 },
+        { name: "Node.js", level: 70 },
         { name: "Java", level: 65 },
         { name: "C#/.NET", level: 30 }
-
       ]
     },
     {
       icon: <Globe className="text-blue-400" size={24} />,
       title: "DevOps",
       skills: [
-        { name: "Linux", level: 70 },
+        { name: "Linux", level: 80 },
         { name: "Docker", level: 80 },
-        { name: "Nginx", level: 60 },
+        { name: "Nginx/Apache", level: 65 },
+        { name: "CI/CD", level: 60 },
         { name: "Powershell", level: 60 }
-
       ]
     },
     {
@@ -90,15 +87,27 @@ const Portfolio = () => {
         { name: "PowerBI", level: 75 },
         { name: "PowerApps", level: 75 },
         { name: "Pandas", level: 85 },
-        { name: "Streamlit", level: 85 }
+        { name: "Streamlit", level: 90 }
+      ]
+    },
+    {
+      icon: <Shield className="text-blue-400" size={24} />,
+      title: "Cybersécurité",
+      skills: [
+        { name: "Sensibilisation", level: 85 },
+        { name: "Sécurité Web", level: 75 },
+        { name: "Automatisation SecOps", level: 70 }
       ]
     },
     {
       icon: <Database className="text-blue-400" size={24} />,
-      title: "Base de données & Outils",
+      title: "Données & Intelligence Artificielle",
       skills: [
         { name: "MySQL", level: 80 },
-        { name: "Git", level: 75 }
+        { name: "Git", level: 80 },
+        { name: "Power Automate", level: 70 },
+        { name: "Prompting avancé", level: 85 },
+        { name: "Intégration d'API LLM", level: 75 },
       ]
     }
   ];
@@ -133,17 +142,48 @@ const Portfolio = () => {
     }
   ];
 
-
   const experiences = [
     {
-      title: "Manager de Projet Informatique en alternance",
+      title: "Automatisation SecByDesign",
       company: "Michelin",
-      startDate: "oct. 2024",
+      startDate: "févr. 2025",
       endDate: "aujourd'hui",
-      details: [
-        "PowerBi",
-        "PowerApps"
+      description: "En tant que membre de l'équipe SecByDesign chez Michelin, je travaille sur l'automatisation des processus de sécurité pour garantir la conformité et la robustesse des systèmes.",
+      missions: [
+        "Développer des scripts Python pour automatiser les vérifications de sécurité",
+        "Analyser les outils et proposer des solutions automatisées",
+        "Créer des rapports automatisés pour le suivi des métriques de sécurité"
       ],
+      techStack: {
+        title: "Stack technique :",
+        details: [
+          "Langage : Python",
+          "Outils : CI/CD, Sécurité automatisée"
+        ]
+      },
+      icon: <Code className="text-blue-400" size={22} />
+    },
+    {
+      title: "Power Platform Developer",
+      company: "Michelin",
+      startDate: "sept. 2024",
+      endDate: "févr. 2025",
+      description: "Développement d'outils et rapports pour les opérateurs de production utilisant la suite Microsoft Power Platform.",
+      missions: [
+        "Création de tableaux de bord et rapports avec Power BI",
+        "Développement d'applications métier avec PowerApps",
+        "Automatisation de processus avec Power Automate",
+        "Accompagnement des utilisateurs dans l'utilisation des outils O365"
+      ],
+      techStack: {
+        title: "Stack technique :",
+        details: [
+          "Microsoft Power BI",
+          "Microsoft PowerApps",
+          "Microsoft Power Automate",
+          "Suite Microsoft O365"
+        ]
+      },
       icon: <FolderKanban className="text-blue-400" size={22} />
     },
     {
@@ -171,22 +211,31 @@ const Portfolio = () => {
       icon: <Code className="text-blue-400" size={22} />
     },
     {
-      title: "Freelance Web Developer",
+      title: "Développeur Web Freelance",
       company: "RyveWeb",
       startDate: "juil. 2022",
       endDate: "aujourd'hui",
       details: [
-        "Create Websites using CMS (Wordpress, Webflow)",
-        "Create Websites using Symfony or full React",
-        "Dockerize Websites"
+        "Création de sites web avec CMS (Wordpress)",
+        "Création de sites web avec Symfony ou React",
+        "Conteneurisation de sites web avec Docker"
       ],
-      location: "Moulins, Auvergne-Rhône-Alpes, France",
+      location: "Pérignat-Lès-Sarlièves, Auvergne-Rhône-Alpes, France",
       workType: "Hybride",
+      techStack: {
+        title: "Stack technique :",
+        details: [
+          "React.js (frontend)",
+          "Symfony (backend PHP)",
+          "Docker (conteneurisation)",
+          "WordPress (CMS)"
+        ]
+      },
       icon: <Code className="text-blue-400" size={22} />
     },
     {
       title: "Technicien système réseau",
-      company: "TERTIAIRE-FORMATION-CONSEIL",
+      company: "TERTIAIRE-FORMATION-CONSEIL (Tert.io)",
       startDate: "août 2021",
       endDate: "juil. 2023",
       location: "Moulins, Auvergne-Rhône-Alpes, France",
@@ -196,6 +245,15 @@ const Portfolio = () => {
         "Intervention à domicile (Installations, diagnostics, réparations)",
         "Mise en place de l'infrastructure réseaux chez divers clients"
       ],
+      techStack: {
+        title: "Stack technique :",
+        details: [
+          "Windows Server (maintenance et administration)",
+          "Windows Client (dépannage et support)",
+          "Diagnostics matériels et logiciels",
+          "Infrastructures réseaux"
+        ]
+      },
       icon: <Network className="text-blue-400" size={22} />
     },
     {
@@ -209,6 +267,14 @@ const Portfolio = () => {
         "Remplacement et configuration des switchs Cisco de la partie Lodge",
         "Migration vers domaine de postes"
       ],
+      techStack: {
+        title: "Stack technique :",
+        details: [
+          "Switchs Cisco (configuration et déploiement)",
+          "Windows (intégration au domaine et configuration)",
+          "Infrastructure réseau"
+        ]
+      },
       icon: <Network className="text-blue-400" size={22} />
     },
     {
@@ -241,7 +307,7 @@ const Portfolio = () => {
       icon: <Code className="text-blue-400" size={24} />
     },
     {
-      title: "Test of English for International Communication (TOEIC)",
+      title: "Test d'anglais pour la communication internationale (TOEIC)",
       score: "950/990 Niveau C1",
       issuer: "Wall Street English France",
       date: "févr. 2024",
@@ -268,12 +334,38 @@ const Portfolio = () => {
       level: "Niveau 4 (Bac)",
       details: [
         "Introduction à l'informatique, à la programmation et aux sciences du numérique",
-        "Bases de l’algorithmique et compréhension des systèmes informatiques"
+        "Bases de l'algorithmique et compréhension des systèmes informatiques"
       ],
       icon: <GraduationCap className="text-blue-400" size={24} />
     }
   ];
 
+  const projects = [
+    {
+      title: "Qroissantage.fr",
+      description: "Un site web éducatif conçu pour sensibiliser les professionnels aux dangers des QR codes malveillants. Le projet simule un 'croissantage' (tradition de bureau d'apporter des croissants) en incitant les utilisateurs à scanner un QR code, démontrant ainsi les risques potentiels.",
+      image: "/projects/qroissantage.png",
+      tags: ["Cybersécurité", "Sensibilisation", "React", "QR Codes"],
+      link: "https://qroissantage.fr",
+      icon: <Shield className="text-blue-400" size={24} />
+    },
+    {
+      title: "Tert.io",
+      description: "Mon premier projet d'envergure avec Symfony, réalisé pour Tertio Informatique à Moulins. Ce site représentait un défi technique significatif qui m'a permis d'approfondir mes compétences en développement PHP/Symfony tout en livrant une interface moderne et responsive pour valoriser les services de l'entreprise.",
+      image: "/projects/tertio.webp",
+      tags: ["Symfony", "PHP", "Challenge technique", "Responsive"],
+      link: "https://tert.io",
+      icon: <Globe2 className="text-blue-400" size={24} />
+    },
+    {
+      title: "RyveIT",
+      description: "Blog d'actualité informatique développé avec WordPress, proposant des astuces, des bons plans et des tutoriels pour aider les lecteurs à rester informés des dernières tendances technologiques et à améliorer leurs compétences informatiques.",
+      image: "/projects/ryveit.png",
+      tags: ["WordPress", "Blog Tech", "Tutoriels", "Bons Plans"],
+      link: "https://ryveit.com",
+      icon: <BookOpen className="text-blue-400" size={24} />
+    }
+  ];
 
   return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
@@ -328,266 +420,285 @@ const Portfolio = () => {
             <div className="container mx-auto px-4 sm:px-6">
               <blockquote className="text-lg sm:text-2xl italic text-center max-w-4xl mx-auto">
                 <span className="text-blue-400">"</span>
-                Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do
-                what you believe is great work. And
-                <span className="font-bold text-blue-400"> the only way to do great work is to love what you do</span>
+                Votre travail va remplir une grande partie de votre vie, et la seule façon d'être vraiment satisfait est de faire ce que vous croyez être un grand travail. Et 
+                <span className="font-bold text-blue-400"> la seule façon de faire du grand travail est d'aimer ce que vous faites</span>
                 <span className="text-blue-400">"</span>
                 <footer className="text-xs sm:text-sm mt-4 text-blue-200">- Steve Jobs</footer>
               </blockquote>
             </div>
           </div>
+          
+          {/* Container for all sections */}
+          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+            
+            {/* About Section */}
+            <section className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">À Propos</h2>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
+                <div className="space-y-6 sm:space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    {aboutSections.map((section, index) => (
+                      <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300">
+                        <div className="flex items-center gap-3 mb-4">
+                          {section.icon}
+                          <h3 className="font-bold text-blue-400">{section.title}</h3>
+                        </div>
+                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{section.content}</p>
+                      </div>
+                    ))}
+                  </div>
 
-          {/* Mobile Tab Menu */}
-          <div className="lg:hidden sticky top-0 z-50 bg-black/70 backdrop-blur-md p-4">
-            <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg flex items-center justify-between"
-            >
-              <span>{activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}</span>
-              <svg
-                  className={`w-5 h-5 transition-transform ${isMenuOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            {isMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md mt-1 rounded-lg overflow-hidden">
-                  {['about', 'experience', 'skills', 'certifications', 'contact'].map((tab) => (
-                      <button
-                          key={tab}
-                          onClick={() => {
-                            setActiveTab(tab);
-                            setIsMenuOpen(false);
-                          }}
-                          className={`w-full px-4 py-3 text-left transition-colors ${
-                              activeTab === tab ? 'bg-blue-500 text-white' : 'text-white hover:bg-white/10'
-                          }`}
-                      >
-                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                      </button>
+                  <div className="bg-white/5 p-4 sm:p-6 rounded-lg mt-6 sm:mt-8">
+                    <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">À propos de moi</h3>
+                    <div className="space-y-4 text-sm sm:text-base text-gray-300">
+                      <p className="leading-relaxed">
+                        Passionné par l'informatique depuis mon plus jeune âge, j'ai développé une expertise polyvalente alliant 
+                        développement web, automatisation Python, et cybersécurité. Mon parcours chez Michelin m'a permis de 
+                        perfectionner mes compétences en développement Python et d'automatisation avec Streamlit, tandis que mon 
+                        expérience en administration système m'a donné une vision globale de l'infrastructure IT.
+                      </p>
+                      <p className="leading-relaxed">
+                        Actuellement en poste chez Michelin dans l'équipe SecByDesign, je combine mes compétences techniques 
+                        avec une vision stratégique de la sécurité. En parallèle, je prépare un titre de Manager de Projet Informatique 
+                        pour renforcer mes compétences en gestion de projet. Je suis particulièrement intéressé par les technologies 
+                        qui allient innovation, performance et sécurité - comme le démontre mon projet Qroissantage.fr axé sur la 
+                        sensibilisation à la cybersécurité.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            {/* Experience Section */}
+            <section className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Expérience</h2>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
+                <div className="space-y-6 sm:space-y-8 pt-4">
+                  {experiences.map((exp, index) => (
+                    <div key={index} className="border-l-4 border-blue-500 pl-4 sm:pl-6 relative mt-2">
+                      <div className="absolute -left-4 -top-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        {exp.icon}
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-bold text-blue-400">{exp.title}</h3>
+                      <div className="text-sm sm:text-base text-blue-200 mb-2">{exp.company} • {exp.startDate} - {exp.endDate}</div>
+                      <div className="bg-white/5 p-3 sm:p-4 rounded-lg mt-2">
+                        {exp.description && <p className="text-sm sm:text-base text-gray-300 mb-3">{exp.description}</p>}
+                        
+                        {exp.missions && (
+                          <div className="mt-3">
+                            <h4 className="text-sm sm:text-base text-blue-300 font-semibold mb-2">Missions :</h4>
+                            <ul className="list-disc list-inside text-sm sm:text-base text-gray-300 space-y-1">
+                              {exp.missions.map((mission, idx) => (
+                                <li key={idx}>{mission}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        
+                        {exp.techStack && (
+                          <div className="mt-3">
+                            <h4 className="text-sm sm:text-base text-blue-300 font-semibold">{exp.techStack.title}</h4>
+                            <ul className="list-disc list-inside text-sm sm:text-base text-gray-300 space-y-1">
+                              {exp.techStack.details.map((detail, idx) => (
+                                <li key={idx}>{detail}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        
+                        {exp.details && (
+                          <ul className="list-disc list-inside text-sm sm:text-base text-gray-300 space-y-1">
+                            {exp.details.map((detail, idx) => (
+                              <li key={idx}>{detail}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    </div>
                   ))}
                 </div>
-            )}
-          </div>
-
-          {/* Desktop Tab Menu */}
-          <div className="hidden lg:flex justify-center mb-12 space-x-6 pt-12">
-            {['about', 'experience', 'skills', 'certifications', 'contact'].map((tab) => (
-                <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`px-6 py-2 rounded-full transition-all ${
-                        activeTab === tab
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-white/10 hover:bg-white/20'
-                    }`}
-                >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-24">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
-              {activeTab === 'about' && (
-                  <div className="space-y-6 sm:space-y-8 animate-fadeIn">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                      {aboutSections.map((section, index) => (
-                          <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4">
-                              {section.icon}
-                              <h3 className="font-bold text-blue-400">{section.title}</h3>
+              </div>
+            </section>
+            
+            {/* Skills Section */}
+            <section className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Compétences</h2>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                  {skillCategories.map((category, index) => (
+                    <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300">
+                      <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                        {category.icon}
+                        <h3 className="font-bold text-blue-400">{category.title}</h3>
+                      </div>
+                      <div className="space-y-4">
+                        {category.skills.map((skill, skillIndex) => (
+                          <div key={skillIndex}>
+                            <div className="flex justify-between text-xs sm:text-sm mb-1">
+                              <span className="text-gray-300">{skill.name}</span>
+                              <span className="text-blue-400">{skill.level}%</span>
                             </div>
-                            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{section.content}</p>
+                            <div className="w-full bg-white/10 rounded-full h-1.5 sm:h-2">
+                              <div
+                                className="bg-blue-400 h-1.5 sm:h-2 rounded-full transition-all duration-500"
+                                style={{ width: `${skill.level}%` }}
+                              />
+                            </div>
                           </div>
-                      ))}
-                    </div>
-
-                    <div className="bg-white/5 p-4 sm:p-6 rounded-lg mt-6 sm:mt-8">
-                      <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">À propos de moi</h3>
-                      <div className="space-y-4 text-sm sm:text-base text-gray-300">
-                        <p className="leading-relaxed">
-                          Passionné par l'informatique depuis mon plus jeune âge, j'ai orienté mon parcours académique et professionnel
-                          vers le développement d'applications et la gestion de projets informatiques. Mon expérience combine expertise
-                          technique et compétences en gestion de projet.
-                        </p>
-                        <p className="leading-relaxed">
-                          Actuellement en poste chez Michelin en tant que Manager de Projet Informatique en alternance, je développe
-                          mes compétences en gestion de projet tout en maintenant une forte expertise technique. Je suis particulièrement
-                          intéressé par l'innovation technologique et l'optimisation constante de mes projets.
-                        </p>
+                        ))}
                       </div>
                     </div>
-                  </div>
-              )}
-
-              {/* Experience Tab */}
-              {activeTab === 'experience' && (
-                  <div className="space-y-6 sm:space-y-8 pt-4 animate-fadeIn">
-                    {experiences.map((exp, index) => (
-                        <div key={index} className="border-l-4 border-blue-500 pl-4 sm:pl-6 relative mt-2">
-                          <div className="absolute -left-4 -top-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                            {exp.icon}
-                          </div>
-                          <h3 className="text-lg sm:text-xl font-bold text-blue-400">{exp.title}</h3>
-                          <div className="text-sm sm:text-base text-blue-200 mb-2">{exp.company} • {exp.startDate} - {exp.endDate}</div>
-                          <div className="bg-white/5 p-3 sm:p-4 rounded-lg mt-2">
-                            {exp.description && <p className="text-sm sm:text-base text-gray-300 mb-3">{exp.description}</p>}
-                            {exp.techStack && (
-                                <div className="space-y-2">
-                                  <div>
-                                    <h4 className="text-sm sm:text-base text-blue-300 font-semibold">{exp.techStack.title}</h4>
-                                    <ul className="list-disc list-inside text-sm sm:text-base text-gray-300 space-y-1">
-                                      {exp.techStack.details.map((detail, idx) => (
-                                          <li key={idx}>{detail}</li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                                </div>
-                            )}
-                            {exp.details && (
-                                <ul className="list-disc list-inside text-sm sm:text-base text-gray-300 space-y-1">
-                                  {exp.details.map((detail, idx) => (
-                                      <li key={idx}>{detail}</li>
-                                  ))}
-                                </ul>
-                            )}
-                          </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            
+            {/* Projects Section */}
+            <section className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Projets</h2>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {projects.map((project, index) => (
+                    <div key={index} className="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all duration-300 flex flex-col">
+                      <div className="h-48 overflow-hidden relative bg-gray-100/80 flex items-center justify-center p-2">
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="max-h-full max-w-full object-contain transform hover:scale-105 transition-transform duration-500"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.onerror = null;
+                            target.src = '/projects/placeholder.png';
+                          }}
+                        />
+                        <div className="absolute top-0 right-0 m-2 p-2 bg-black/50 rounded-full">
+                          {project.icon}
                         </div>
-                    ))}
-                  </div>
-              )}
-
-              {/* Skills Tab */}
-              {activeTab === 'skills' && (
-                  <div className="animate-fadeIn">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                      {skillCategories.map((category, index) => (
-                          <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                            <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                              {category.icon}
-                              <h3 className="font-bold text-blue-400">{category.title}</h3>
-                            </div>
-                            <div className="space-y-4">
-                              {category.skills.map((skill, skillIndex) => (
-                                  <div key={skillIndex}>
-                                    <div className="flex justify-between text-xs sm:text-sm mb-1">
-                                      <span className="text-gray-300">{skill.name}</span>
-                                      <span className="text-blue-400">{skill.level}%</span>
-                                    </div>
-                                    <div className="w-full bg-white/10 rounded-full h-1.5 sm:h-2">
-                                      <div
-                                          className="bg-blue-400 h-1.5 sm:h-2 rounded-full transition-all duration-500"
-                                          style={{ width: `${skill.level}%` }}
-                                      />
-                                    </div>
-                                  </div>
-                              ))}
-                            </div>
-                          </div>
-                      ))}
+                      </div>
+                      <div className="p-4 sm:p-6 flex-grow">
+                        <h3 className="text-xl font-bold text-blue-400 mb-2">{project.title}</h3>
+                        <p className="text-sm sm:text-base text-gray-300 mb-4">{project.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className="bg-blue-900/30 text-blue-200 text-xs px-2 py-1 rounded-full">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="p-4 sm:p-6 pt-0">
+                        <a 
+                          href={project.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm w-full text-center"
+                        >
+                          Visiter le site
+                        </a>
+                      </div>
                     </div>
-                  </div>
-              )}
-              {/* Certifications Tab */}
-              {activeTab === 'certifications' && (
-                  <div className="animate-fadeIn space-y-4 sm:space-y-6">
-                    {certifications.map((cert, index) => (
-                        <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-colors">
-                          <div className="flex items-start gap-4">
-                            <div className="hidden sm:block">{cert.icon}</div>
-                            <div className="space-y-3 flex-1">
-                              <div>
-                                <h3 className="text-lg sm:text-xl font-bold text-blue-400 leading-tight">{cert.title}</h3>
-                                {cert.code && <p className="text-sm sm:text-base text-blue-200">Code RNCP: {cert.code}</p>}
-                                {cert.score && <p className="text-sm sm:text-base text-blue-200">{cert.score}</p>}
-                                <p className="text-sm sm:text-base text-gray-300">{cert.issuer}</p>
-                                {cert.level && <p className="text-sm sm:text-base text-gray-300">{cert.level}</p>}
-                              </div>
-                              {cert.details && (
-                                  <div className="mt-4">
-                                    <h4 className="text-xs sm:text-sm font-semibold text-blue-300 mb-2">Compétences attestées:</h4>
-                                    <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 ml-1">
-                                      {cert.details.map((detail, idx) => (
-                                          <li key={idx} className="text-sm leading-relaxed">{detail}</li>
-                                      ))}
-                                    </ul>
-                                  </div>
-                              )}
-                              <div className="flex flex-col sm:flex-row gap-2 text-xs sm:text-sm text-gray-400">
-                                <span>Obtenu : {cert.date}</span>
-                                {cert.expiry && <span className="sm:before:content-['•'] sm:before:mx-2">Expire : {cert.expiry}</span>}
-                              </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            
+            {/* Certifications Section */}
+            <section className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Certifications</h2>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
+                <div className="space-y-4 sm:space-y-6">
+                  {certifications.map((cert, index) => (
+                    <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-colors">
+                      <div className="flex items-start gap-4">
+                        <div className="hidden sm:block">{cert.icon}</div>
+                        <div className="space-y-3 flex-1">
+                          <div>
+                            <h3 className="text-lg sm:text-xl font-bold text-blue-400 leading-tight">{cert.title}</h3>
+                            {cert.code && <p className="text-sm sm:text-base text-blue-200">Code RNCP: {cert.code}</p>}
+                            {cert.score && <p className="text-sm sm:text-base text-blue-200">{cert.score}</p>}
+                            <p className="text-sm sm:text-base text-gray-300">{cert.issuer}</p>
+                            {cert.level && <p className="text-sm sm:text-base text-gray-300">{cert.level}</p>}
+                          </div>
+                          {cert.details && (
+                            <div className="mt-4">
+                              <h4 className="text-xs sm:text-sm font-semibold text-blue-300 mb-2">Compétences attestées:</h4>
+                              <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 ml-1">
+                                {cert.details.map((detail, idx) => (
+                                  <li key={idx} className="text-sm leading-relaxed">{detail}</li>
+                                ))}
+                              </ul>
                             </div>
+                          )}
+                          <div className="flex flex-col sm:flex-row gap-2 text-xs sm:text-sm text-gray-400">
+                            <span>Obtenu : {cert.date}</span>
                           </div>
                         </div>
-                    ))}
-                  </div>
-              )}
-
-              {/* Contact Tab */}
-              {activeTab === 'contact' && (
-                  <div className="animate-fadeIn">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                      {contactInfo.map((info, index) => (
-                          info.link ? (
-                              <a
-                                  key={index}
-                                  href={info.link}
-                                  target={info.link.startsWith('mailto:') ? '_self' : '_blank'}
-                                  rel="noopener noreferrer"
-                                  className="block bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300 group"
-                              >
-                                <div className="flex items-start gap-4">
-                                  <div className="text-blue-400 group-hover:scale-110 transition-transform">
-                                    {info.icon}
-                                  </div>
-                                  <div>
-                                    <h3 className="font-bold text-blue-400 mb-1 group-hover:text-blue-300">{info.title}</h3>
-                                    <span className="text-sm sm:text-base text-gray-300 group-hover:text-blue-200 transition-colors block mb-2">
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+            
+            {/* Contact Section */}
+            <section className="mb-16">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Contact</h2>
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  {contactInfo.map((info, index) => (
+                    info.link ? (
+                      <a
+                        key={index}
+                        href={info.link}
+                        target={info.link.startsWith('mailto:') ? '_self' : '_blank'}
+                        rel="noopener noreferrer"
+                        className="block bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300 group"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="text-blue-400 group-hover:scale-110 transition-transform">
+                            {info.icon}
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-blue-400 mb-1 group-hover:text-blue-300">{info.title}</h3>
+                            <span className="text-sm sm:text-base text-gray-300 group-hover:text-blue-200 transition-colors block mb-2">
                               {info.value}
                             </span>
-                                    <p className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300">{info.description}</p>
-                                  </div>
-                                </div>
-                              </a>
-                          ) : (
-                              <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                                <div className="flex items-start gap-4">
-                                  <div className="text-blue-400">
-                                    {info.icon}
-                                  </div>
-                                  <div>
-                                    <h3 className="font-bold text-blue-400 mb-1">{info.title}</h3>
-                                    <span className="text-sm sm:text-base text-gray-300 block mb-2">{info.value}</span>
-                                    <p className="text-xs sm:text-sm text-gray-400">{info.description}</p>
-                                  </div>
-                                </div>
-                              </div>
-                          )
-                      ))}
-
-                      <div className="sm:col-span-2 bg-white/5 p-4 sm:p-6 rounded-lg">
-                        <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">Disponibilité</h3>
-                        <p className="text-sm sm:text-base text-gray-300 mb-4">
-                          Actuellement, je suis à la recherche d'une alternance axée sur le développement et/ou DevOps
-                          pour une durée de 2 ans. Mon rythme serait d'une semaine en entreprise et une semaine à l'école
-                          HESIAS, où je prépare un titre RNCP38905 de Manager de Projet Informatique. Je suis mobile et
-                          très motivé à contribuer à des nouveaux projets.
-                        </p>
-                        <p className="text-sm sm:text-base text-gray-300">
-                          N'hésitez pas à me contacter pour échanger sur d'éventuelles collaborations ou opportunités.
-                        </p>
+                            <p className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300">{info.description}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ) : (
+                      <div key={index} className="bg-white/5 p-4 sm:p-6 rounded-lg hover:bg-white/10 transition-all duration-300">
+                        <div className="flex items-start gap-4">
+                          <div className="text-blue-400">
+                            {info.icon}
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-blue-400 mb-1">{info.title}</h3>
+                            <span className="text-sm sm:text-base text-gray-300 block mb-2">{info.value}</span>
+                            <p className="text-xs sm:text-sm text-gray-400">{info.description}</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    )
+                  ))}
+
+                  <div className="sm:col-span-2 bg-white/5 p-4 sm:p-6 rounded-lg">
+                    <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">Disponibilité</h3>
+                    <p className="text-sm sm:text-base text-gray-300 mb-4">
+                      Actuellement, je suis à la recherche d'une alternance axée sur le développement et/ou DevOps
+                      pour une durée de 2 ans. Mon rythme serait d'une semaine en entreprise et une semaine à l'école
+                      HESIAS, où je prépare un titre RNCP38905 de Manager de Projet Informatique. Je suis mobile et
+                      très motivé à contribuer à des nouveaux projets.
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-300">
+                      N'hésitez pas à me contacter pour échanger sur d'éventuelles collaborations ou opportunités.
+                    </p>
                   </div>
-              )}
-            </div>
+                </div>
+              </div>
+            </section>
           </div>
 
           {/* Footer */}
@@ -604,7 +715,7 @@ const Portfolio = () => {
                   <Mail size={20} className="sm:w-6 sm:h-6"/>
                 </a>
               </div>
-              <p className="text-sm text-blue-200">© 2024 Maxime VÉRY. All rights reserved.</p>
+              <p className="text-sm text-blue-200">© 2024 Maxime VÉRY. Tous droits réservés.</p>
             </div>
           </footer>
         </div>
