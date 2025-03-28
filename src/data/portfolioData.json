@@ -1,0 +1,350 @@
+{
+  "socialLinks": {
+    "github": "https://github.com/ryvexam",
+    "linkedin": "https://www.linkedin.com/in/maxime-very/",
+    "email": "maximevery@ryvexam.fr"
+  },
+  "aboutSections": [
+    {
+      "title": "Expérience",
+      "content": "Python Developer chez Michelin, 2 ans d'administration système et réseau à Tertio Informatique, activité freelance en développement web, et expérience en cybersécurité avec Qroissantage.fr.",
+      "iconType": "Briefcase"
+    },
+    {
+      "title": "Formation",
+      "content": "En préparation du titre Manager de Projet Informatique (RNCP38905), après l'obtention du titre Concepteur Développeur d'Applications (RNCP37873), BTS SIO option SISR, et Bac S spécialité ISN.",
+      "iconType": "Education"
+    },
+    {
+      "title": "Compétences Techniques",
+      "content": "Développement web fullstack (React, Symfony), automatisation Python, DevOps (Docker, Linux), cybersécurité, et outils d'analyse de données (PowerBI, Pandas, Streamlit).",
+      "iconType": "Code2"
+    }
+  ],
+  "skillCategories": [
+    {
+      "title": "Développement Frontend",
+      "iconType": "Code",
+      "skills": [
+        { "name": "React.js", "level": 85 },
+        { "name": "JavaScript/TypeScript", "level": 80 },
+        { "name": "Tailwind CSS", "level": 85 },
+        { "name": "WordPress", "level": 75 }
+      ]
+    },
+    {
+      "title": "Développement Backend",
+      "iconType": "Terminal",
+      "skills": [
+        { "name": "PHP/Symfony", "level": 80 },
+        { "name": "Python", "level": 85 },
+        { "name": "Node.js", "level": 70 },
+        { "name": "Java", "level": 65 },
+        { "name": "C#/.NET", "level": 30 }
+      ]
+    },
+    {
+      "title": "DevOps",
+      "iconType": "Globe",
+      "skills": [
+        { "name": "Linux", "level": 80 },
+        { "name": "Docker", "level": 80 },
+        { "name": "Nginx/Apache", "level": 65 },
+        { "name": "CI/CD", "level": 60 },
+        { "name": "Powershell", "level": 60 }
+      ]
+    },
+    {
+      "title": "Outils Business",
+      "iconType": "Cpu",
+      "skills": [
+        { "name": "PowerBI", "level": 75 },
+        { "name": "PowerApps", "level": 75 },
+        { "name": "Pandas", "level": 85 },
+        { "name": "Streamlit", "level": 90 }
+      ]
+    },
+    {
+      "title": "Cybersécurité",
+      "iconType": "Shield",
+      "skills": [
+        { "name": "Sensibilisation", "level": 85 },
+        { "name": "Sécurité Web", "level": 75 },
+        { "name": "Automatisation SecOps", "level": 70 }
+      ]
+    },
+    {
+      "title": "Données & Intelligence Artificielle",
+      "iconType": "Database",
+      "skills": [
+        { "name": "MySQL", "level": 80 },
+        { "name": "Git", "level": 80 },
+        { "name": "Power Automate", "level": 70 },
+        { "name": "Prompting avancé", "level": 85 },
+        { "name": "Intégration d'API LLM", "level": 75 }
+      ]
+    }
+  ],
+  "contactInfo": [
+    {
+      "title": "Email Professionnel",
+      "value": "maximevery@ryvexam.fr",
+      "link": "mailto:maximevery@ryvexam.fr",
+      "description": "Disponible pour discuter de projets et d'opportunités",
+      "iconType": "Mail"
+    },
+    {
+      "title": "LinkedIn",
+      "value": "Maxime VÉRY",
+      "link": "https://www.linkedin.com/in/maxime-very/",
+      "description": "Connectons-nous et échangeons sur LinkedIn",
+      "iconType": "Linkedin"
+    },
+    {
+      "title": "GitHub",
+      "value": "ryvexam",
+      "link": "https://github.com/ryvexam",
+      "description": "Découvrez mes projets et contributions",
+      "iconType": "Github"
+    },
+    {
+      "title": "Localisation",
+      "value": "Pérignat les Sarlièves, Auvergne-Rhône-Alpes",
+      "description": "Disponible pour des opportunités dans la région",
+      "iconType": "MapPin"
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Automatisation SecByDesign",
+      "company": "Michelin",
+      "startDate": "févr. 2025",
+      "endDate": "aujourd'hui",
+      "description": "En tant que membre de l'équipe SecByDesign chez Michelin, je travaille sur l'automatisation des processus de sécurité pour garantir la conformité et la robustesse des systèmes.",
+      "missions": [
+        "Développer des scripts Python pour automatiser les vérifications de sécurité",
+        "Analyser les outils et proposer des solutions automatisées",
+        "Créer des rapports automatisés pour le suivi des métriques de sécurité"
+      ],
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "Langage : Python",
+          "Outils : CI/CD, Sécurité automatisée"
+        ]
+      },
+      "iconType": "Code"
+    },
+    {
+      "title": "Power Platform Developer",
+      "company": "Michelin",
+      "startDate": "sept. 2024",
+      "endDate": "févr. 2025",
+      "description": "Développement d'outils et rapports pour les opérateurs de production utilisant la suite Microsoft Power Platform.",
+      "missions": [
+        "Création de tableaux de bord et rapports avec Power BI",
+        "Développement d'applications métier avec PowerApps",
+        "Automatisation de processus avec Power Automate",
+        "Accompagnement des utilisateurs dans l'utilisation des outils O365"
+      ],
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "Microsoft Power BI",
+          "Microsoft PowerApps",
+          "Microsoft Power Automate",
+          "Suite Microsoft O365"
+        ]
+      },
+      "iconType": "FolderKanban"
+    },
+    {
+      "title": "Python Software Developer",
+      "company": "Michelin",
+      "startDate": "sept. 2023",
+      "endDate": "sept. 2024",
+      "description": "En tant que Software Developer en alternance chez Michelin, j'ai mené à bien un projet solo de développement d'une application Streamlit pour automatiser la complétion de fichiers Excel, réduisant considérablement les tâches manuelles et augmentant l'efficacité des utilisateurs.",
+      "missions": [
+        "Concevoir, développer et déployer une application Streamlit pour l'automatisation de la complétion de fichiers Excel",
+        "Réaliser l'intégralité du projet, de la réflexion initiale aux tests finaux, en autonomie",
+        "Concevoir et implémenter l'interface utilisateur en mettant l'accent sur l'UX/UI pour garantir une expérience utilisateur optimale",
+        "Collaborer avec une équipe de 3 utilisateurs pour effectuer des tests, recueillir des retours et effectuer des ajustements basés sur les besoins réels des utilisateurs",
+        "Optimiser le code et résoudre les bug",
+        "Organiser des réunions régulières avec les utilisateurs pour s'assurer que l'outil répondait à leurs attentes"
+      ],
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "Front-end : Streamlit, Python",
+          "Back-end : Python",
+          "Base de données : Pandas, Excel"
+        ]
+      },
+      "iconType": "Code"
+    },
+    {
+      "title": "Développeur Web Freelance",
+      "company": "RyveWeb",
+      "startDate": "juil. 2022",
+      "endDate": "aujourd'hui",
+      "details": [
+        "Création de sites web avec CMS (Wordpress)",
+        "Création de sites web avec Symfony ou React",
+        "Conteneurisation de sites web avec Docker"
+      ],
+      "location": "Pérignat-Lès-Sarlièves, Auvergne-Rhône-Alpes, France",
+      "workType": "Hybride",
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "React.js (frontend)",
+          "Symfony (backend PHP)",
+          "Docker (conteneurisation)",
+          "WordPress (CMS)"
+        ]
+      },
+      "iconType": "Code"
+    },
+    {
+      "title": "Technicien système réseau",
+      "company": "TERTIAIRE-FORMATION-CONSEIL (Tert.io)",
+      "startDate": "août 2021",
+      "endDate": "juil. 2023",
+      "location": "Moulins, Auvergne-Rhône-Alpes, France",
+      "workType": "Sur site",
+      "details": [
+        "Support à Distance",
+        "Intervention à domicile (Installations, diagnostics, réparations)",
+        "Mise en place de l'infrastructure réseaux chez divers clients"
+      ],
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "Windows Server (maintenance et administration)",
+          "Windows Client (dépannage et support)",
+          "Diagnostics matériels et logiciels",
+          "Infrastructures réseaux"
+        ]
+      },
+      "iconType": "Network"
+    },
+    {
+      "title": "Technicien informatique",
+      "company": "Le PAL",
+      "startDate": "févr. 2021",
+      "endDate": "févr. 2021",
+      "location": "Saint-Pourçain-sur-Besbre, Auvergne-Rhône-Alpes, France",
+      "details": [
+        "Installation d'une flotte de switch Cisco pour l'hôtel Le Savanna",
+        "Remplacement et configuration des switchs Cisco de la partie Lodge",
+        "Migration vers domaine de postes"
+      ],
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "Switchs Cisco (configuration et déploiement)",
+          "Windows (intégration au domaine et configuration)",
+          "Infrastructure réseau"
+        ]
+      },
+      "iconType": "Network"
+    },
+    {
+      "title": "Opérateur d'attractions",
+      "company": "Le PAL",
+      "startDate": "juin 2018",
+      "endDate": "sept. 2023",
+      "details": [
+        "Accueil de la clientèle sur l'attraction",
+        "Vérification des normes de sécurité quotidienne",
+        "Surveillance du bon déroulement de l'attraction sur le parcours"
+      ],
+      "additionalInfo": "Saison 2018 - 2019 - 2020 - 2021 - 2023",
+      "iconType": "RollerCoaster"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Concepteur développeur d'applications (CDA)",
+      "issuer": "Ministère du Travail",
+      "code": "RNCP37873",
+      "date": "juil. 2024",
+      "level": "Niveau 6 (Bac +3/4)",
+      "details": [
+        "Développer une application sécurisée",
+        "Concevoir et développer une application sécurisée organisée en couches",
+        "Préparer le déploiement d'une application sécurisée"
+      ],
+      "iconType": "Code"
+    },
+    {
+      "title": "Test d'anglais pour la communication internationale (TOEIC)",
+      "score": "950/990 Niveau C1",
+      "issuer": "Wall Street English France",
+      "date": "févr. 2024",
+      "expiry": "févr. 2026",
+      "iconType": "Award"
+    },
+    {
+      "title": "Brevet de Technicien Supérieur (BTS) en Services Informatiques aux Organisations",
+      "option": "Solutions d'Infrastructure, Systèmes et Réseaux (SISR)",
+      "issuer": "Ministère de l'Éducation Nationale",
+      "date": "2023",
+      "level": "Niveau 5 (Bac +2)",
+      "details": [
+        "Installation, configuration et gestion de réseaux et serveurs",
+        "Sécurisation des systèmes d'information",
+        "Assistance aux utilisateurs et résolution de problèmes réseaux"
+      ],
+      "iconType": "Server"
+    },
+    {
+      "title": "Baccalauréat Scientifique (S) spécialité Informatique et Sciences du Numérique (ISN)",
+      "issuer": "Ministère de l'Éducation Nationale",
+      "date": "2017",
+      "level": "Niveau 4 (Bac)",
+      "details": [
+        "Introduction à l'informatique, à la programmation et aux sciences du numérique",
+        "Bases de l'algorithmique et compréhension des systèmes informatiques"
+      ],
+      "iconType": "GraduationCap"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Qroissantage.fr",
+      "description": "Un site web éducatif conçu pour sensibiliser les professionnels aux dangers des QR codes malveillants. Le projet simule un 'croissantage' (tradition de bureau d'apporter des croissants) en incitant les utilisateurs à scanner un QR code, démontrant ainsi les risques potentiels.",
+      "image": "/projects/qroissantage.png",
+      "tags": ["Cybersécurité", "Sensibilisation", "React", "QR Codes"],
+      "link": "https://qroissantage.fr",
+      "iconType": "Shield"
+    },
+    {
+      "title": "Tert.io",
+      "description": "Mon premier projet d'envergure avec Symfony, réalisé pour Tertio Informatique à Moulins. Ce site représentait un défi technique significatif qui m'a permis d'approfondir mes compétences en développement PHP/Symfony tout en livrant une interface moderne et responsive pour valoriser les services de l'entreprise.",
+      "image": "/projects/tertio.webp",
+      "tags": ["Symfony", "PHP", "Challenge technique", "Responsive"],
+      "link": "https://tert.io",
+      "iconType": "Globe2"
+    },
+    {
+      "title": "RyveIT",
+      "description": "Blog d'actualité informatique développé avec WordPress, proposant des astuces, des bons plans et des tutoriels pour aider les lecteurs à rester informés des dernières tendances technologiques et à améliorer leurs compétences informatiques.",
+      "image": "/projects/ryveit.png",
+      "tags": ["WordPress", "Blog Tech", "Tutoriels", "Bons Plans"],
+      "link": "https://ryveit.com",
+      "iconType": "BookOpen"
+    }
+  ],
+  "heroInfo": {
+    "name": "Maxime VÉRY",
+    "title": "Manager de Projet Informatique en Alternance",
+    "location": "Pérignat-lès-Sarlièves, Auvergne-Rhône-Alpes, France",
+    "profileImage": "/profil_pic.png"
+  },
+  "quote": {
+    "text": "Votre travail va remplir une grande partie de votre vie, et la seule façon d'être vraiment satisfait est de faire ce que vous croyez être un grand travail. Et la seule façon de faire du grand travail est d'aimer ce que vous faites",
+    "highlight": "la seule façon de faire du grand travail est d'aimer ce que vous faites",
+    "author": "Steve Jobs"
+  }
+}
