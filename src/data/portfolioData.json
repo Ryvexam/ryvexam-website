@@ -110,7 +110,7 @@
     {
       "title": "Localisation",
       "value": "Pérignat les Sarlièves, Auvergne-Rhône-Alpes",
-      "description": "Disponible pour des opportunités dans la région",
+      "description": "",
       "iconType": "MapPin"
     }
   ],
@@ -136,24 +136,25 @@
       "iconType": "Code"
     },
     {
-      "title": "Power Platform Developer",
+      "title": "Data Analyst et Digital Transformer",
       "company": "Michelin",
       "startDate": "sept. 2024",
       "endDate": "févr. 2025",
-      "description": "Développement d'outils et rapports pour les opérateurs de production utilisant la suite Microsoft Power Platform.",
+      "description": "En tant que Data Analyst et Digital Transformer, j'interviens dans le développement de solutions numériques visant à améliorer l'adoption des outils Microsoft 365 et à fournir aux managers d'opérateurs des outils de suivi de l'adoption des outils O365 de leurs équipes.",
       "missions": [
-        "Création de tableaux de bord et rapports avec Power BI",
-        "Développement d'applications métier avec PowerApps",
-        "Automatisation de processus avec Power Automate",
-        "Accompagnement des utilisateurs dans l'utilisation des outils O365"
+        "Maintenir, optimiser et développer un dashboard Power BI permettant aux managers d'opérateurs de suivre l'adoption des outils Microsoft 365 au sein de leurs équipes",
+        "Concevoir et améliorer des applications Power Apps adaptées aux besoins des managers pour les aider à superviser les performances et les processus de leurs opérateurs",
+        "Développer de nouveaux projets pour encourager les opérateurs à adopter les outils Microsoft 365",
+        "Collaborer étroitement avec les managers pour comprendre leurs besoins spécifiques et ajuster les solutions en conséquence",
+        "Documenter les solutions développées et assurer leur maintenance pour garantir une adoption et une efficacité durable"
       ],
       "techStack": {
         "title": "Stack technique :",
         "details": [
-          "Microsoft Power BI",
-          "Microsoft PowerApps",
-          "Microsoft Power Automate",
-          "Suite Microsoft O365"
+          "Visualisation de données : Power BI",
+          "Développement d'applications : Power Apps",
+          "Écosystème collaboratif : Microsoft 365 (Teams, SharePoint, OneDrive, etc.)",
+          "Automatisation : Power Automate"
         ]
       },
       "iconType": "FolderKanban"
@@ -265,6 +266,18 @@
   ],
   "certifications": [
     {
+      "title": "Bachelor of Science",
+      "issuer": "Hesias",
+      "date": "2023-2024",
+      "level": "Niveau 6 (Bac +3)",
+      "details": [
+        "Développement d'une application complète (Web, Mobile, Client) de A à Z",
+        "Conception et réalisation du projet de bout en bout",
+        "Gestion complète du cycle de développement"
+      ],
+      "iconType": "GraduationCap"
+    },
+    {
       "title": "Concepteur développeur d'applications (CDA)",
       "issuer": "Ministère du Travail",
       "code": "RNCP37873",
@@ -334,6 +347,30 @@
       "tags": ["WordPress", "Blog Tech", "Tutoriels", "Bons Plans"],
       "link": "https://ryveit.com",
       "iconType": "BookOpen"
+    },
+    {
+      "title": "HelloAsso No Donation",
+      "description": "Une extension de navigateur qui supprime automatiquement le don par défaut sur HelloAsso, conçue pour aider les étudiants en période difficile.",
+      "image": "/projects/helloassonodonation.png",
+      "links": [
+        {
+          "name": "Firefox Add-on",
+          "url": "https://addons.mozilla.org/fr/firefox/addon/helloasso-no-donation/"
+        },
+        {
+          "name": "Chrome Web Store",
+          "url": "https://chromewebstore.google.com/detail/helloasso-no-donation/dmelnhgbbkdcbkldifpmgbjpofggback"
+        }
+      ],
+      "techStack": {
+        "title": "Stack technique :",
+        "details": [
+          "JavaScript",
+          "Web Extensions API",
+          "Cross-browser compatibility"
+        ]
+      },
+      "iconType": "Code"
     }
   ],
   "heroInfo": {

@@ -1,12 +1,18 @@
 import React from 'react';
 
+interface ProjectLink {
+  name: string;
+  url: string;
+}
+
 interface ProjectsProps {
   projects: Array<{
     title: string;
     description: string;
     image: string;
-    tags: string[];
-    link: string;
+    tags?: string[];
+    link?: string;
+    links?: ProjectLink[];
     icon: React.ReactNode;
   }>;
 }
@@ -37,23 +43,41 @@ const ProjectsSection: React.FC<ProjectsProps> = ({ projects }) => {
               <div className="p-4 sm:p-6 flex-grow">
                 <h3 className="text-xl font-bold text-blue-400 mb-2">{project.title}</h3>
                 <p className="text-sm sm:text-base text-gray-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="bg-blue-900/30 text-blue-200 text-xs px-2 py-1 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {project.tags && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="bg-blue-900/30 text-blue-200 text-xs px-2 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
               <div className="p-4 sm:p-6 pt-0">
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm w-full text-center"
-                >
-                  Visiter le site
-                </a>
+                {project.links ? (
+                  <div className="flex flex-col gap-2">
+                    {project.links.map((link, linkIndex) => (
+                      <a 
+                        key={linkIndex}
+                        href={link.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm w-full text-center"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                ) : project.link && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm w-full text-center"
+                  >
+                    Visiter le site
+                  </a>
+                )}
               </div>
             </div>
           ))}

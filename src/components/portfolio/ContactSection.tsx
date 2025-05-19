@@ -53,19 +53,6 @@ const ContactSection: React.FC<ContactProps> = ({ contactInfo }) => {
               </div>
             )
           ))}
-
-          <div className="sm:col-span-2 bg-white/5 p-4 sm:p-6 rounded-lg">
-            <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-4">Disponibilité</h3>
-            <p className="text-sm sm:text-base text-gray-300 mb-4">
-              Actuellement, je suis à la recherche d'une alternance axée sur le développement et/ou DevOps
-              pour une durée de 2 ans. Mon rythme serait d'une semaine en entreprise et une semaine à l'école
-              HESIAS, où je prépare un titre RNCP38905 de Manager de Projet Informatique. Je suis mobile et
-              très motivé à contribuer à des nouveaux projets.
-            </p>
-            <p className="text-sm sm:text-base text-gray-300">
-              N'hésitez pas à me contacter pour échanger sur d'éventuelles collaborations ou opportunités.
-            </p>
-          </div>
         </div>
       </div>
     </section>
