@@ -8,11 +8,12 @@ interface ContactProps {
     link?: string;
     description: string;
   }>;
+  sectionId?: string;
 }
 
-const ContactSection: React.FC<ContactProps> = ({ contactInfo }) => {
+const ContactSection: React.FC<ContactProps> = ({ contactInfo, sectionId }) => {
   return (
-    <section className="mb-16">
+    <section id={sectionId} className="mb-16 scroll-mt-24">
       <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Contact</h2>
       <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

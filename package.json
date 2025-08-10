@@ -2,8 +2,23 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
+    "ajv": "^8.12.0",
+    "lucide-react": "^0.344.0",
+    "next": "^14.2.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svgo": "^3.3.2",
+    "web-vitals": "^3.5.2"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
@@ -11,29 +26,10 @@
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "ajv": "^8.12.0",
-    "lucide-react": "^0.344.0",
-    "nth-check": "^2.1.1",
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.4.35",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.2",
-    "react-scripts": "5.0.1",
-    "svgo": "^3.3.2",
-    "typescript": "^4.9.5",
-    "web-vitals": "^3.5.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   },
   "browserslist": {
     "production": [
@@ -46,9 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/react-router-dom": "^5.3.3",
-    "tailwindcss": "^3.4.1"
   }
 }

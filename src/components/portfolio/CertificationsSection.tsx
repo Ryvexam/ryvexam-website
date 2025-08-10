@@ -12,11 +12,12 @@ interface CertificationsProps {
     expiry?: string;
     icon: React.ReactNode;
   }>;
+  sectionId?: string;
 }
 
-const CertificationsSection: React.FC<CertificationsProps> = ({ certifications }) => {
+const CertificationsSection: React.FC<CertificationsProps> = ({ certifications, sectionId }) => {
   return (
-    <section className="mb-16">
+    <section id={sectionId} className="mb-16 scroll-mt-24">
       <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Certifications</h2>
       <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
         <div className="space-y-4 sm:space-y-6">

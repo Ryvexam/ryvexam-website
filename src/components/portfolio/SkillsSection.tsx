@@ -9,11 +9,12 @@ interface SkillsProps {
       level: number;
     }>;
   }>;
+  sectionId?: string;
 }
 
-const SkillsSection: React.FC<SkillsProps> = ({ skillCategories }) => {
+const SkillsSection: React.FC<SkillsProps> = ({ skillCategories, sectionId }) => {
   return (
-    <section className="mb-16">
+    <section id={sectionId} className="mb-16 scroll-mt-24">
       <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Compétences</h2>
       <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

@@ -15,26 +15,27 @@ interface ProjectsProps {
     links?: ProjectLink[];
     icon: React.ReactNode;
   }>;
+  sectionId?: string;
 }
 
-const ProjectsSection: React.FC<ProjectsProps> = ({ projects }) => {
+import Image from 'next/image';
+
+const ProjectsSection: React.FC<ProjectsProps> = ({ projects, sectionId }) => {
   return (
-    <section className="mb-16">
+    <section id={sectionId} className="mb-16 scroll-mt-24">
       <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Projets</h2>
       <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all duration-300 flex flex-col">
               <div className="h-48 overflow-hidden relative bg-gray-100/80 flex items-center justify-center p-2">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="max-h-full max-w-full object-contain transform hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null;
-                    target.src = '/projects/placeholder.png';
-                  }}
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-contain p-2 transition-transform duration-500 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                  priority={index < 2}
                 />
                 <div className="absolute top-0 right-0 m-2 p-2 bg-black/50 rounded-full">
                   {project.icon}

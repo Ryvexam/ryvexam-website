@@ -18,11 +18,12 @@ interface ExperienceProps {
     additionalInfo?: string;
     icon: React.ReactNode;
   }>;
+  sectionId?: string;
 }
 
-const ExperienceSection: React.FC<ExperienceProps> = ({ experiences }) => {
+const ExperienceSection: React.FC<ExperienceProps> = ({ experiences, sectionId }) => {
   return (
-    <section className="mb-16">
+    <section id={sectionId} className="mb-16 scroll-mt-24">
       <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-400">Expérience</h2>
       <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-8 shadow-xl">
         <div className="space-y-6 sm:space-y-8 pt-4">
